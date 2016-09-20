@@ -1,0 +1,10 @@
+<h5 class="card-header">Add new post</h5>
+<div class="card-block"> 
+	<div class="form-group">
+		<input class="form-control" type="text" name="post" [(ngModel)]="post" placeholder="Post">
+	</div>
+	<button class="btn btn-primary"  (click)="addComment(post)" >
+        <i class="fa fa-floppy-o"></i>
+		Add Post
+	</button>
+</div>

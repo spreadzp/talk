@@ -1,0 +1,23 @@
+<div class="row">
+	<span>Commenting post:</span>
+	<span>{{postForComment.time | date:"dd/MM/yy HH:mm"}}</span>
+	<span>:</span>
+	<span>{{postForComment.post}}</span>
+	<br/>
+	<input class="form-control" type="text" name="comment" placeholder="Comment" [(ngModel)]="newCom" required>
+</div>
+<div>
+	<span>
+		<button type="submit" (click)="addSubComment(newCom);"			  
+			class="btn btn-sm btn-primary"> 
+			<i class="fa fa-floppy-o"></i>
+			add Subcomment
+		</button>
+	</span>
+	<span>
+		<button class="btn btn-sm btn-warning" (click)="cancelSubcomment()"> 
+			<i class="fa fa-times"></i>
+			Cancel
+		</button>
+	</span>
+</div>

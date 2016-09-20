@@ -1,0 +1,28 @@
+<div class="container-fluid">
+	<div class="row">
+		<span>{{comment.time | date:"dd/MM/yy HH:mm"}}:</span>
+		<span>{{comment.post}}</span>
+		<div *ngIf="comment.count_child != 0">			
+			<a href="#" (click)="ShowChildComment(comment._id); isShowChild = !isShowChild "  >{{message}} {{comment.count_child}} comments?</a>
+			<div *ngIf="isShowChild">
+				<child-comments [children]="children" (refreshForum) = "refreshData($event)"></child-comments>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="isAuth">
+		<button class="btn btn-sm btn-warning" (click)="isEdit = !isEdit">
+		 <i class="fa fa-pencil"></i>
+			Edit my post
+		</button>
+		<div *ngIf="isEdit">
+			<edit-panel [comment]="comment" (resultEditing)="resultEditing($event)"></edit-panel>
+		</div>
+		<button class="btn btn-sm btn-primary active" (click) = "isAvalibleComment=!isAvalibleComment"> 
+		<i class="fa-flag"></i>
+			Comment this post
+		</button>
+	</div>
+	<div *ngIf="isAvalibleComment">
+		<subcomment [postForComment]="comment" (endSubComment) = "endSubComment($event)"></subcomment>
+	</div>
+</div>

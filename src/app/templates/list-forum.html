@@ -1,0 +1,8 @@
+<div class="card">
+	<ul *ngFor="let comment of comments" class="list-group list-group-flush">
+		<item-comment   [comment]="comment" (refreshForum)="refreshForum($event)" class="list-group-item"> </item-comment>
+	</ul>
+</div>
+<div *ngIf="isAuth" class="card" >
+	<new-comment   (pushNewComment)="pushNewComment($event)" class="list-group list-group-flush"></new-comment>
+</div>	

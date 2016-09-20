@@ -1,0 +1,38 @@
+body {
+	font-family: Verdana, sans-serif;
+	margin-top: 15px;
+}
+
+
+
+.card {
+	margin-top: .75rem;
+} 
+.comment{
+	border-color: red;
+	border: 10px;
+	border-style: red;
+}
+
+.comment-list {
+	border-color: green;
+	border: 2px;
+} 
+form{
+	
+	border-color: green;
+	border: 10px;
+	border-style: red;
+	}
+ li{
+ 	list-style-type:none;
+ }
+.alert {
+	z-index: 999;
+	position: fixed;
+	bottom: 15px;
+	left: 25%;
+	width: 50%;
+	opacity: 0.9;
+}
+

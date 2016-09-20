@@ -1,0 +1,5 @@
+{
+	"port": 2016,
+	"uriDB1": "mongodb://localhost:27017/superchat",
+	"uriDB": "mongodb://chat:chat@ds019946.mlab.com:19946/superchat" 	
+}
